@@ -70,3 +70,143 @@ public class VotingEligibility {
         sc.close();
     }
 }
+5. ATM Withdrawal System
+    import java.util.Scanner;
+
+public class ATMWithdrawal {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int balance = 10000; // example balance
+        System.out.print("Enter withdrawal amount: ");
+        int withdraw = sc.nextInt();
+
+        if (balance >= withdraw) {
+            System.out.println("Transaction Successful");
+        } else {
+            System.out.println("Insufficient Balance");
+        }
+
+        sc.close();
+    }
+}
+6.Online Shopping Discount
+
+    import java.util.Scanner;
+
+public class ShoppingDiscount {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter total purchase amount: ");
+        double amount = sc.nextDouble();
+        double discount = 0;
+
+        if (amount >= 5000) {
+            discount = amount * 0.20;
+        } else if (amount >= 2000) {
+            discount = amount * 0.10;
+        } 
+
+        double finalAmount = amount - discount;
+        System.out.println("Discount Applied: " + discount);
+        System.out.println("Final Amount to Pay: " + finalAmount);
+
+        sc.close();
+    }
+}
+7.Traffic Signal System
+
+    import java.util.Scanner;
+
+public class TrafficSignal {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Signal Color (Red/Yellow/Green): ");
+        String color = sc.next().toLowerCase(); // convert to lowercase for consistency
+
+        if (color.equals("red")) {
+            System.out.println("Stop");
+        } else if (color.equals("yellow")) {
+            System.out.println("Get Ready");
+        } else if (color.equals("green")) {
+            System.out.println("Go");
+        } else {
+            System.out.println("Invalid Color");
+        }
+
+        sc.close();
+    }
+}
+8.Given two integers M and N, calculate the product of all integers from M and N inclusive .if M is greater than N , return 1 or display an appropriate message
+
+    import java.util.Scanner;
+
+public class ProductOfRange {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input values
+        System.out.print("Enter M: ");
+        int M = sc.nextInt();
+
+        System.out.print("Enter N: ");
+        int N = sc.nextInt();
+
+        // Check if M > N
+        if (M > N) {
+            System.out.println("1 (Invalid Range: M is greater than N)");
+        } else {
+            long product = 1; // use long to avoid overflow for large numbers
+            for (int i = M; i <= N; i++) {
+                product *= i;
+            }
+            System.out.println("Product = " + product);
+        }
+
+        sc.close();
+    }
+}
+9.Given  two integers M and N, calculate the product  of all odd integers from M and N inclusive.if M is greater than N , return 1 or display an appropriate message 
+
+    import java.util.Scanner;
+
+public class ProductOfOddRange {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input values
+        System.out.print("Enter M: ");
+        int M = sc.nextInt();
+
+        System.out.print("Enter N: ");
+        int N = sc.nextInt();
+
+        // Check if M > N
+        if (M > N) {
+            System.out.println("1 (Invalid Range: M is greater than N)");
+        } else {
+            long product = 1;
+            boolean foundOdd = false;
+
+            for (int i = M; i <= N; i++) {
+                if (i % 2 != 0) {  // check if odd
+                    product *= i;
+                    foundOdd = true;
+                }
+            }
+
+            if (foundOdd) {
+                System.out.println("Product of odd numbers = " + product);
+            } else {
+                System.out.println("No odd numbers in the given range.");
+            }
+        }
+
+        sc.close();
+    }
+}
+
+
+
